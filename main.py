@@ -17,7 +17,9 @@ from tasks import (
     create_roadmap_task
 )
 
-
+# ------------------------
+# Get User Input
+# ------------------------
 
 user_data = get_user_input()
 
