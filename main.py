@@ -17,31 +17,21 @@ from tasks import (
     create_roadmap_task
 )
 
-# ------------------------
-# Get User Input
-# ------------------------
+
 
 user_data = get_user_input()
 
-# ------------------------
-# Create Agents
-# ------------------------
+
 
 skill_agent = create_skill_analyzer()
 career_agent = create_career_recommender()
 roadmap_agent = create_learning_roadmap()
 
-# ------------------------
-# Create Tasks
-# ------------------------
+
 
 skill_task = create_skill_analysis_task(skill_agent, user_data)
 career_task = create_career_task(career_agent, user_data)
 roadmap_task = create_roadmap_task(roadmap_agent)
-
-# ------------------------
-# Create Crew
-# ------------------------
 
 career_crew = Crew(
     agents=[
@@ -58,9 +48,6 @@ career_crew = Crew(
     verbose=True
 )
 
-# ------------------------
-# Run Crew
-# ------------------------
 
 result = career_crew.kickoff()
 
